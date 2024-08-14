@@ -2,6 +2,11 @@ import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default <Partial<Config>>{
+   safelist: [
+      'text-white',
+      'text-black',
+      'hover:text-primary-500',
+   ],
    theme: {
       extend: {
          colors: {

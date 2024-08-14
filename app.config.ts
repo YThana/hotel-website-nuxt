@@ -1,13 +1,6 @@
 export default defineAppConfig({
    ui: {
-      primary: 'green',
+      primary: 'orange',
       gray: 'cool',
-
-      /**
-       * To import the icon dynamically
-       */
-      icons: {
-         dynamic: true,
-      },
    },
 });
