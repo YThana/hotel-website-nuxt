@@ -1,23 +1,23 @@
 <script setup lang="ts">
 const isFixed = ref(false);
 
-function checkScroll() {
-   isFixed.value = window.scrollY > 20;
-}
-
 const linkButtonClass = computed(() => {
    if (isFixed.value)
       return 'hover:text-primary-500 text-black';
    return 'hover:text-primary-500  text-white';
 });
 
+function onScroll() {
+   isFixed.value = window.scrollY > 20;
+}
+
 onMounted(() => {
-   checkScroll();
-   window.addEventListener('scroll', checkScroll);
+   onScroll();
+   window.addEventListener('scroll', onScroll);
 });
 
 onUnmounted(() => {
-   window.removeEventListener('scroll', checkScroll);
+   window.removeEventListener('scroll', onScroll);
 });
 </script>
 
@@ -72,7 +72,7 @@ onUnmounted(() => {
          <slot />
       </main>
 
-      <footer class="mt-14">
+      <footer>
          <div class="w-full bg-primary-100 px-6 py-10">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                <section class="flex flex-col gap-4">
@@ -123,20 +123,20 @@ onUnmounted(() => {
                      Contact Us
                   </h3>
                   <div class="flex gap-3 items-center">
-                     <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-600" />
+                     <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-500" />
                      <p>+94658525888</p>
                   </div>
                   <div class="flex gap-3 items-center">
-                     <UIcon name="i-heroicons-envelope-20-solid" class="size-5 text-slate-600" />
+                     <UIcon name="i-heroicons-envelope-20-solid" class="size-5 text-slate-500" />
                      <p>abc@gmail.com</p>
                   </div>
                   <div class="flex gap-3 items-center">
-                     <UIcon name="i-heroicons-home-solid" class="size-5 text-slate-600" />
+                     <UIcon name="i-heroicons-home-solid" class="size-5 text-slate-500" />
                      <p>No.02 some street, Navalady, Batticaloa</p>
                   </div>
                </div>
 
-               <section class="md:col-span-2 lg:col-span-3 border-t pt-3 border-primary-200 text-slate-500 text-center">
+               <section class="md:col-span-2 lg:col-span-3 text-sm border-t pt-3 border-primary-200 text-slate-500 text-center">
                   Copyright © {{ new Date().getFullYear() }} Lagoon Hut | All rights reserved
                </section>
             </div>
@@ -146,5 +146,4 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="postcss">
-
 </style>

@@ -5,22 +5,23 @@ function handleLetsExplore() {
 </script>
 
 <template>
-   <!-- start: hero -->
+   <!-- region: hero -->
    <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
       <div class="flex h-full p-6 items-center justify-center">
-         <div class="flex flex-col gap-8 md:gap-10">
-            <h1 class="font-bold text-6xl md:text-8xl text-primary">
+         <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
+            <h1 class="font-bold text-6xl sm:text-8xl text-primary">
                Hotel
                <span class="text-white">Lagoon Hut</span>
             </h1>
 
-            <p class="text-white italic font-bold text-2xl md:text-3xl md:text-4xl md:max-w-xl md:mx-auto md:text-center">
+            <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl">
                "Experience <span class="text-primary">luxury</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
             </p>
 
-            <div class="flex md:justify-center">
+            <div>
                <UButton
                   size="xl"
+                  class="px-8"
                   @click="handleLetsExplore"
                >
                   Let's Explore
@@ -30,9 +31,9 @@ function handleLetsExplore() {
          </div>
       </div>
    </div>
-   <!-- end: hero -->
+   <!-- endregion: hero -->
 
-   <!-- start: about -->
+   <!-- region: about -->
    <section id="about" class="mt-14 container mx-auto px-6">
       <div class="flex flex-col-reverse lg:flex-row gap-10">
          <div class="w-full lg:w-1/2 flex items-center">
@@ -81,9 +82,9 @@ function handleLetsExplore() {
          </div>
       </div>
    </section>
-   <!-- end: about -->
+   <!-- endregion: about -->
 
-   <!-- start: gallery -->
+   <!-- region: gallery -->
    <section id="image-gallery" class="mt-14 mx-auto container px-6">
       <div class="flex flex-col gap-5 items-center text-center">
          <h4 class="section-heading-tag">
@@ -99,7 +100,7 @@ function handleLetsExplore() {
          </p>
       </div>
 
-      <!-- start: image grid -->
+      <!-- region: image grid -->
       <div class="flex flex-wrap w-full mt-8">
          <div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 gap-4 w-full md:h-[36rem] lg:h-[52rem] xl:h-[64rem]">
             <div class="group gallery-img-wrapper">
@@ -127,55 +128,130 @@ function handleLetsExplore() {
             </div>
          </div>
       </div>
-      <!-- end: image grid -->
+      <!-- endregion: image grid -->
    </section>
-   <!-- end: gallery -->
+   <!-- endregion: gallery -->
 
-   <!-- start: Dishes -->
+   <!-- region: Dishes -->
    <section id="dishes" class="mt-14">
       <div class="w-full bg-fixed shadow-[inset_0_400px_400px_120px_rgba(0,0,0,0.8)] h-[50rem] bg-no-repeat bg-center bg-cover bg-[url('/dishes-bg.webp')]">
          <div class="size-full container mx-auto px-6 flex items-center justify-center">
-            <div class="flex gap-4 w-full">
-               <div class="flex flex-col gap-6 w-1/2 items-start">
+            <div class="flex w-full flex-col md:flex-row gap-y-8 gap-x-4">
+               <div class="flex flex-col gap-6 w-full md:w-1/2 justify-center items-center md:items-start text-center md:text-left">
                   <h2 class="section-heading text-white">
                      Our Delicious Dishes
                   </h2>
-                  <p class="text-white max-w-lg">
+                  <p class="text-white md:max-w-lg">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                   </p>
-                  <UButton color="orange" label="See More Dishes" class="px-8" size="xl" />
+                  <UButton
+                     color="orange"
+                     label="See More Dishes"
+                     class="px-8"
+                     size="xl"
+                     trailing
+                     icon="i-heroicons-arrow-long-right-16-solid"
+                  />
                </div>
-               <div class="w-1/2"></div>
+
+               <div class="w-full flex justify-center md:justify-end md:w-1/2">
+                  <div class="w-[25rem]">
+                     <!-- region: dish card slider -->
+                     <Swiper
+                        :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                        :loop="true"
+                        :slides-per-view="1"
+                        :autoplay="{
+                           delay: 2000,
+                           disableOnInteraction: true,
+                        }"
+                     >
+                        <SwiperSlide v-for="slide in 10" :key="slide">
+                           <div class="h-96 flex items-center bg-red-400 justify-center w-full">
+                              <strong>{{ slide }}</strong>
+                           </div>
+                        </SwiperSlide>
+                     </Swiper>
+                     <!-- endregion: dish card slider -->
+                  </div>
+               </div>
             </div>
          </div>
       </div>
    </section>
-   <!-- end: Dishes -->
+   <!-- endregion: Dishes -->
 
-   <!-- start: Events -->
+   <!-- region: Events -->
    <section id="events" class="container mx-auto px-6 mt-14">
       <div class="flex flex-col gap-6">
          <h4 class="section-heading-tag border-l-4 border-primary pl-4">
             Event Types
          </h4>
 
-         <h2 class="section-heading">
-            Our Comfort Events
-         </h2>
+         <div class="flex gap-4 items-center justify-between">
+            <h2 class="section-heading">
+               Our Comfort Events
+            </h2>
+
+            <!-- region: see more events button for md screen -->
+            <div class="hidden md:flex">
+               <UButton
+                  label="See More Events"
+                  variant="link"
+                  class="text-xl font-normal"
+                  :padded="false"
+               >
+                  <template #trailing>
+                     <UIcon name="i-heroicons-arrow-long-right-16-solid" class="text-primary size-6" />
+                  </template>
+               </UButton>
+            </div>
+            <!-- endregion: see more events button for md screen -->
+         </div>
 
          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
             <EventCard />
             <EventCard />
             <EventCard />
          </div>
+
+         <!-- region: see more events button for mobile screen -->
+         <div class="mt-4 flex md:hidden justify-end">
+            <UButton
+               label="See More Events"
+               variant="link"
+               class="text-xl font-normal"
+               :padded="false"
+            >
+               <template #trailing>
+                  <UIcon name="i-heroicons-arrow-long-right-16-solid" class="text-primary size-6" />
+               </template>
+            </UButton>
+         </div>
+         <!-- endregion: see more events button for mobile screen -->
       </div>
    </section>
-   <!-- end: Events -->
+   <!-- endregion: Events -->
+
+   <!-- region: map iframe -->
+   <section id="map" class="mt-14 bg-slate-100">
+      <iframe
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.557478783252!2d81.70709557491931!3d7.7305336922878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afacdb7e66b6c7f%3A0x5183f651a5ba7e5d!2sThe%20Lagoon%20Hut!5e0!3m2!1sen!2slk!4v1724215936550!5m2!1sen!2slk"
+         width="100%"
+         height="450"
+         style="border:0;"
+         allowfullscreen
+         loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+   </section>
+   <!-- endregion: map iframe -->
 </template>
 
 <style scoped lang="postcss">
 .gallery-img-wrapper{
-   @apply transition-all overflow-hidden hover:shadow-2xl shadow-slate-200 duration-200
+   @apply transition-all overflow-hidden hover:shadow-[0px_0px_20px_0px_rgba(0,0,0,0.5)] duration-200
 }
 
 .gallery-img{
