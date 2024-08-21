@@ -155,7 +155,7 @@ function handleLetsExplore() {
                </div>
 
                <div class="w-full flex justify-center md:justify-end md:w-1/2">
-                  <div class="w-[25rem]">
+                  <div class="w-full lg:w-[25rem]">
                      <!-- region: dish card slider -->
                      <Swiper
                         :modules="[SwiperAutoplay, SwiperEffectCreative]"
