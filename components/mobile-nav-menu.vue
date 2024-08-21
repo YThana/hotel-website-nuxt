@@ -19,7 +19,7 @@ const isFixed = defineModel();
       </UButton>
 
       <USlideover v-model="isOpen">
-         <div class="min-h-screen overflow-auto w-full p-6">
+         <div class="min-h-screen bg-white bg-opacity-60 backdrop-blur-md overflow-auto w-full p-6">
             <div class="flex items-center flex-col gap-16">
                <UButton
                   variant="link"
@@ -41,7 +41,7 @@ const isFixed = defineModel();
                   active-class="font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
                >
-                  Rooms
+                  Events
                </ULink>
                <ULink
                   active-class="font-semibold text-primary"
