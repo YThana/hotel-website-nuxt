@@ -1,7 +1,25 @@
 <script setup lang="ts">
-function handleLetsExplore() {
-   window.scrollTo(0, window.innerHeight - 90);
+interface Dish {
+   id: number;
+   img: string;
+   title: string;
+   about: string;
 }
+
+const dishes: Dish[] = [
+   {
+      id: 1,
+      img: '/dishes/dish-1.jpg',
+      title: 'Panneer Butter Masala',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+   {
+      id: 2,
+      img: '/dishes/dish-2.jpg',
+      title: 'Paani Poori',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+];
 </script>
 
 <template>
@@ -22,7 +40,7 @@ function handleLetsExplore() {
                <UButton
                   size="xl"
                   class="px-8"
-                  @click="handleLetsExplore"
+                  @click="handleMainSectionScroll"
                >
                   Let's Explore
                   <UIcon name="i-heroicons-arrow-long-right" class="animate-pulse text-white size-6" />
@@ -155,10 +173,10 @@ function handleLetsExplore() {
                </div>
 
                <div class="w-full flex justify-center md:justify-end md:w-1/2">
-                  <div class="w-full lg:w-[25rem]">
+                  <div class="w-full lg:w-[28rem] backdrop-blur-md bg-white/10">
                      <!-- region: dish card slider -->
                      <Swiper
-                        :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                        :modules="[SwiperAutoplay]"
                         :loop="true"
                         :slides-per-view="1"
                         :autoplay="{
@@ -166,9 +184,13 @@ function handleLetsExplore() {
                            disableOnInteraction: true,
                         }"
                      >
-                        <SwiperSlide v-for="slide in 10" :key="slide">
-                           <div class="h-96 flex items-center bg-red-400 justify-center w-full">
-                              <strong>{{ slide }}</strong>
+                        <SwiperSlide v-for="dish in dishes" :key="dish.id">
+                           <div class="p-4 h-[25rem] md:h-[28rem] flex items-center justify-center w-full">
+                              <SliderDishCard
+                                 :img="dish.img"
+                                 :about="dish.about"
+                                 :title="dish.title"
+                              />
                            </div>
                         </SwiperSlide>
                      </Swiper>
@@ -196,6 +218,7 @@ function handleLetsExplore() {
             <!-- region: see more events button for md screen -->
             <div class="hidden md:flex">
                <UButton
+                  to="/events"
                   label="See More Events"
                   variant="link"
                   class="text-xl font-normal"
@@ -218,6 +241,7 @@ function handleLetsExplore() {
          <!-- region: see more events button for mobile screen -->
          <div class="mt-4 flex md:hidden justify-end">
             <UButton
+               to="/events"
                label="See More Events"
                variant="link"
                class="text-xl font-normal"

@@ -46,12 +46,14 @@ onUnmounted(() => {
                      Home
                   </ULink>
                   <ULink
+                     to="/events"
                      active-class="font-bold text-primary"
                      :inactive-class="linkButtonClass"
                   >
                      Events
                   </ULink>
                   <ULink
+                     to="/dishes"
                      active-class="font-bold text-primary"
                      :inactive-class="linkButtonClass"
                   >
@@ -105,12 +107,14 @@ onUnmounted(() => {
                      Home
                   </ULink>
                   <ULink
+                     to="/events"
                      active-class="font-bold text-primary"
                      inactive-class="text-black hover:text-primary"
                   >
                      Events
                   </ULink>
                   <ULink
+                     to="/dishes"
                      active-class="font-bold text-primary"
                      inactive-class="text-black hover:text-primary"
                   >

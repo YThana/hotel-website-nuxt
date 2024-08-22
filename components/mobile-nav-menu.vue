@@ -38,12 +38,14 @@ const isFixed = defineModel();
                   Home
                </ULink>
                <ULink
+                  to="/events"
                   active-class="font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
                >
                   Events
                </ULink>
                <ULink
+                  to="/dishes"
                   active-class="font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
                >
