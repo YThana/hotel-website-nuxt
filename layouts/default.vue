@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { handleScrollBottomOfPage } from '~/helpers/handle-scroll';
+
 const isFixed = ref(false);
 
 const linkButtonClass = computed(() => {
@@ -23,6 +25,19 @@ onUnmounted(() => {
 
 <template>
    <div>
+      <!-- region: whatsapp contact -->
+      <!--      <div class="fixed z-20 bottom-6 right-6"> -->
+      <!--         <UButton -->
+      <!--            variant="link" -->
+      <!--            :padded="false" -->
+      <!--            target="_blank" -->
+      <!--            to="https://wa.me/9476272745" -->
+      <!--         > -->
+      <!--            <UIcon name="i-logos-whatsapp-icon" class="size-12 md:size-16" /> -->
+      <!--         </UButton> -->
+      <!--      </div> -->
+      <!-- endregion: whatsapp contact -->
+
       <header
          class="w-full p-6 z-10 fixed left-1/2 -translate-x-1/2"
          :class="[isFixed && 'transition-all backdrop-blur-md bg-white/75 shadow-lg']"
@@ -35,7 +50,7 @@ onUnmounted(() => {
                   class="text-4xl font-bold"
                   :class="[!isFixed && 'text-white']"
                >
-                  Logo
+                  Lagoon Hut
                </h3>
                <div class="hidden md:flex gap-6 items-center">
                   <ULink
@@ -60,7 +75,7 @@ onUnmounted(() => {
                      Dishes
                   </ULink>
 
-                  <UButton label="Contact Us" size="xl" />
+                  <UButton label="Contact Us" size="xl" @click="handleScrollBottomOfPage" />
                </div>
 
                <div class="flex md:hidden">
@@ -79,7 +94,7 @@ onUnmounted(() => {
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                <section class="flex flex-col gap-4">
                   <h2 class="text-5xl font-bold">
-                     Logo
+                     Lagoon Hut
                   </h2>
                   <p class="max-w-72 text-slate-600">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -129,6 +144,12 @@ onUnmounted(() => {
                   <div class="flex gap-3 items-center">
                      <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-500" />
                      <p>+94658525888</p>
+                  </div>
+                  <div class="flex gap-3 items-center group">
+                     <UIcon name="i-uil-whatsapp" class="size-5 text-green-600 group-hover:text-green-500" />
+                     <ULink to="https://wa.me/9476272745" class="text-green-600 group-hover:text-green-500">
+                        Click here to WhatsApp Chat!
+                     </ULink>
                   </div>
                   <div class="flex gap-3 items-center">
                      <UIcon name="i-heroicons-envelope-20-solid" class="size-5 text-slate-500" />

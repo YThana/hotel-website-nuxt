@@ -2,13 +2,31 @@
 export default defineNuxtConfig({
    compatibilityDate: '2024-04-03',
    devtools: { enabled: true },
-   modules: ['@nuxt/ui', 'nuxt-aos', 'nuxt-swiper'],
+   modules: ['@nuxt/ui', 'nuxt-aos', 'nuxt-swiper', '@nuxtjs/google-fonts'],
    // nuxt ui color mode
    colorMode: {
       preference: 'light',
    },
-   // swiper options
-   swiper: {
+   // aos options
+   aos: {
+      once: true,
+      duration: 600,
+   },
+   // google-fonts options
+   googleFonts: {
+      display: 'swap',
+      families: {
+         Inter: {
+            wght: '400..900',
+            ital: '400..900',
+         },
+         Bitter: {
+            wght: '400..900',
+            ital: '400..900',
+         },
+      },
+      preload: true,
+      preconnect: true,
    },
    components: [
       { path: '~/components', pathPrefix: false },

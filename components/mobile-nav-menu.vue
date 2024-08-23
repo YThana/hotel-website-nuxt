@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { handleScrollBottomOfPage } from '~/helpers/handle-scroll';
+
 const isOpen = ref(false);
 
 const isFixed = defineModel();
+
+function handleContactUs() {
+   isOpen.value = false;
+   handleScrollBottomOfPage();
+}
 </script>
 
 <template>
@@ -34,23 +41,27 @@ const isFixed = defineModel();
                   to="/"
                   active-class="text-3xl font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
+                  @click="isOpen = false"
                >
                   Home
                </ULink>
                <ULink
                   to="/events"
-                  active-class="font-semibold text-primary"
+                  active-class="text-3xl font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
+                  @click="isOpen = false"
                >
                   Events
                </ULink>
                <ULink
                   to="/dishes"
-                  active-class="font-semibold text-primary"
+                  active-class="text-3xl font-semibold text-primary"
                   inactive-class="text-slate-700 text-3xl"
+                  @click="isOpen = false"
                >
                   Dishes
                </ULink>
+               <UButton label="Contact Us" size="xl" @click="handleContactUs" />
             </div>
          </div>
       </USlideover>

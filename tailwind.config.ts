@@ -8,6 +8,10 @@ export default <Partial<Config>>{
       'hover:text-primary-500',
    ],
    theme: {
+      fontFamily: {
+         heading: ['Bitter', 'serif'],
+         inter: ['Inter', 'sans-serif'],
+      },
       extend: {
          colors: {
             green: {

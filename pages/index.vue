@@ -1,12 +1,8 @@
 <script setup lang="ts">
-interface Dish {
-   id: number;
-   img: string;
-   title: string;
-   about: string;
-}
+import { handleMainSectionScroll } from '~/helpers/handle-scroll';
+import type { CardData } from '~/types/card-component-types';
 
-const dishes: Dish[] = [
+const dishes: CardData[] = [
    {
       id: 1,
       img: '/dishes/dish-1.jpg',
@@ -18,6 +14,28 @@ const dishes: Dish[] = [
       img: '/dishes/dish-2.jpg',
       title: 'Paani Poori',
       about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+      tag: 'New',
+   },
+];
+
+const events: CardData[] = [
+   {
+      id: 1,
+      img: '/events/event-1.jpg',
+      title: 'Birthday Party',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At',
+   },
+   {
+      id: 2,
+      img: '/events/event-1.jpg',
+      title: 'Birthday Party',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At',
+   },
+   {
+      id: 3,
+      img: '/events/event-1.jpg',
+      title: 'Birthday Party',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At',
    },
 ];
 </script>
@@ -27,16 +45,16 @@ const dishes: Dish[] = [
    <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
       <div class="flex h-full p-6 items-center justify-center">
          <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
-            <h1 class="font-bold text-6xl sm:text-8xl text-primary">
+            <h1 class="font-bold text-6xl sm:text-8xl text-primary font-heading" data-aos="fade-up">
                Hotel
                <span class="text-white">Lagoon Hut</span>
             </h1>
 
-            <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl">
+            <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl" data-aos="fade-up" data-aos-delay="200">
                "Experience <span class="text-primary">luxury</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
             </p>
 
-            <div>
+            <div data-aos="fade-up" data-aos-delay="400">
                <UButton
                   size="xl"
                   class="px-8"
@@ -54,24 +72,24 @@ const dishes: Dish[] = [
    <!-- region: about -->
    <section id="about" class="mt-14 container mx-auto px-6">
       <div class="flex flex-col-reverse lg:flex-row gap-10">
-         <div class="w-full lg:w-1/2 flex items-center">
+         <div class="w-full lg:w-1/2 flex items-center" data-aos="fade-right">
             <img src="/about-section/about-section-primary.jpg" class="size-full max-h-[48rem] object-cover" alt="hotel img" />
          </div>
 
          <div class="w-full md:justify-center lg:w-1/2 flex flex-col gap-6">
-            <h4 class="section-heading-tag border-l-4 border-primary pl-4">
+            <h4 class="section-heading-tag border-l-4 border-primary pl-4" data-aos="fade-left">
                About Lagoon Hut
             </h4>
 
-            <h2 class="section-heading">
+            <h2 class="section-heading" data-aos="fade-left">
                Luxury and best service villa in the town
             </h2>
 
-            <p class="text-slate-500">
+            <p class="text-slate-500" data-aos="fade-left">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
             </p>
 
-            <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-6" data-aos="fade-left">
                <div class="row-span-2">
                   <img src="/about-section/about-section-secondary.jpeg" class="size-full max-h-[24rem] object-cover" alt="hotel image" />
                </div>
@@ -79,7 +97,7 @@ const dishes: Dish[] = [
                <div class="flex flex-col justify-center">
                   <UIcon name="i-heroicons-home-modern" class="size-9 text-primary hover:text-primary-600" />
 
-                  <h3 class="mt-2 text-lg md:text-xl font-medium">
+                  <h3 class="mt-2 text-lg md:text-xl font-medium font-heading">
                      Peaceful Place
                   </h3>
                   <p class="text-sm text-slate-500">
@@ -89,7 +107,7 @@ const dishes: Dish[] = [
 
                <div class="flex flex-col justify-center">
                   <UIcon name="i-heroicons-sun-16-solid" class="animate-spin duration-200 size-9 text-primary hover:text-primary-600" />
-                  <h3 class="mt-2 text-lg md:text-xl font-medium">
+                  <h3 class="mt-2 text-lg md:text-xl font-medium font-heading">
                      Top Travel
                   </h3>
                   <p class="text-sm text-slate-500">
@@ -105,15 +123,15 @@ const dishes: Dish[] = [
    <!-- region: gallery -->
    <section id="image-gallery" class="mt-14 mx-auto container px-6">
       <div class="flex flex-col gap-5 items-center text-center">
-         <h4 class="section-heading-tag">
+         <h4 class="section-heading-tag" data-aos="fade-up">
             Our Gallery
          </h4>
 
-         <h2 class="section-heading">
+         <h2 class="section-heading" data-aos="fade-up">
             Captured Moments in Hotel
          </h2>
 
-         <p class="text-slate-500">
+         <p class="text-slate-500" data-aos="fade-up">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
          </p>
       </div>
@@ -121,27 +139,27 @@ const dishes: Dish[] = [
       <!-- region: image grid -->
       <div class="flex flex-wrap w-full mt-8">
          <div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 gap-4 w-full md:h-[36rem] lg:h-[52rem] xl:h-[64rem]">
-            <div class="group gallery-img-wrapper">
+            <div class="group gallery-img-wrapper" data-aos="fade-up">
                <img src="/gallery-section/gallery-image-2.jpg" alt="gallery image 2" class="gallery-img" />
             </div>
 
-            <div class="group gallery-img-wrapper row-span-2">
+            <div class="group gallery-img-wrapper row-span-2" data-aos="fade-up">
                <img src="/gallery-section/gallery-image-1.jpg" alt="gallery image 4" class="gallery-img" />
             </div>
 
-            <div class="group gallery-img-wrapper">
+            <div class="group gallery-img-wrapper" data-aos="fade-up">
                <img src="/gallery-section/gallery-image-4.jpg" alt="gallery image 1" class="gallery-img" />
             </div>
 
-            <div class="group gallery-img-wrapper row-span-2">
+            <div class="group gallery-img-wrapper row-span-2" data-aos="fade-right">
                <img src="/gallery-section/gallery-image-6.jpg" alt="gallery image 5" class="gallery-img" />
             </div>
 
-            <div class="group gallery-img-wrapper row-span-2">
+            <div class="group gallery-img-wrapper row-span-2" data-aos="fade-left">
                <img src="/gallery-section/gallery-image-3.jpg" alt="gallery image 3" class="gallery-img" />
             </div>
 
-            <div class="group gallery-img-wrapper">
+            <div class="group gallery-img-wrapper" data-aos="fade-up">
                <img src="/gallery-section/gallery-image-5.jpg" alt="gallery image 6" class="gallery-img" />
             </div>
          </div>
@@ -152,27 +170,30 @@ const dishes: Dish[] = [
 
    <!-- region: Dishes -->
    <section id="dishes" class="mt-14">
-      <div class="w-full bg-fixed shadow-[inset_0_400px_400px_120px_rgba(0,0,0,0.8)] h-[50rem] bg-no-repeat bg-center bg-cover bg-[url('/dishes-bg.webp')]">
+      <div class="w-full bg-fixed shadow-[inset_0_400px_400px_120px_rgba(0,0,0,0.8)] h-[50rem] bg-no-repeat bg-center bg-cover bg-[url('/dishes-bg-home.webp')]">
          <div class="size-full container mx-auto px-6 flex items-center justify-center">
             <div class="flex w-full flex-col md:flex-row gap-y-8 gap-x-4">
                <div class="flex flex-col gap-6 w-full md:w-1/2 justify-center items-center md:items-start text-center md:text-left">
-                  <h2 class="section-heading text-white">
+                  <h2 class="section-heading text-white" data-aos="fade-right">
                      Our Delicious Dishes
                   </h2>
-                  <p class="text-white md:max-w-lg">
+                  <p class="text-white md:max-w-lg" data-aos="fade-right">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                   </p>
-                  <UButton
-                     color="orange"
-                     label="See More Dishes"
-                     class="px-8"
-                     size="xl"
-                     trailing
-                     icon="i-heroicons-arrow-long-right-16-solid"
-                  />
+                  <div data-aos="fade-right">
+                     <UButton
+                        size="xl"
+                        class="px-8"
+                        color="orange"
+                        to="/dishes"
+                     >
+                        See More Dishes
+                        <UIcon name="i-heroicons-arrow-long-right" class="animate-pulse text-white size-6" />
+                     </UButton>
+                  </div>
                </div>
 
-               <div class="w-full flex justify-center md:justify-end md:w-1/2">
+               <div class="w-full flex justify-center md:justify-end md:w-1/2" data-aos="fade-left">
                   <div class="w-full lg:w-[28rem] backdrop-blur-md bg-white/10">
                      <!-- region: dish card slider -->
                      <Swiper
@@ -186,10 +207,12 @@ const dishes: Dish[] = [
                      >
                         <SwiperSlide v-for="dish in dishes" :key="dish.id">
                            <div class="p-4 h-[25rem] md:h-[28rem] flex items-center justify-center w-full">
-                              <SliderDishCard
+                              <CardComponent
                                  :img="dish.img"
                                  :about="dish.about"
                                  :title="dish.title"
+                                 :tag="dish.tag"
+                                 type="swiper-dish"
                               />
                            </div>
                         </SwiperSlide>
@@ -206,17 +229,17 @@ const dishes: Dish[] = [
    <!-- region: Events -->
    <section id="events" class="container mx-auto px-6 mt-14">
       <div class="flex flex-col gap-6">
-         <h4 class="section-heading-tag border-l-4 border-primary pl-4">
+         <h4 class="section-heading-tag border-l-4 border-primary pl-4" data-aos="fade-right">
             Event Types
          </h4>
 
-         <div class="flex gap-4 items-center justify-between">
+         <div class="flex gap-4 items-center justify-between" data-aos="fade-right">
             <h2 class="section-heading">
                Our Comfort Events
             </h2>
 
             <!-- region: see more events button for md screen -->
-            <div class="hidden md:flex">
+            <div class="hidden md:flex" data-aos="fade-left">
                <UButton
                   to="/events"
                   label="See More Events"
@@ -232,14 +255,19 @@ const dishes: Dish[] = [
             <!-- endregion: see more events button for md screen -->
          </div>
 
-         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
-            <EventCard />
-            <EventCard />
-            <EventCard />
+         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6" data-aos="fade-up">
+            <div v-for="event in events" :key="event.id" data-aos="fade-up">
+               <CardComponent
+                  :img="event.img"
+                  :about="event.about"
+                  :title="event.title"
+                  :tag="event.tag"
+               />
+            </div>
          </div>
 
          <!-- region: see more events button for mobile screen -->
-         <div class="mt-4 flex md:hidden justify-end">
+         <div class="mt-4 flex md:hidden justify-end" data-aos="fade-left">
             <UButton
                to="/events"
                label="See More Events"
@@ -283,7 +311,7 @@ const dishes: Dish[] = [
 }
 
 .section-heading{
-   @apply text-4xl xl:text-5xl font-semibold uppercase
+   @apply text-4xl xl:text-5xl font-semibold uppercase font-heading
 }
 
 .section-heading-tag{
