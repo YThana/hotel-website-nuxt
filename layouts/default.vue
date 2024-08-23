@@ -26,12 +26,13 @@ onUnmounted(() => {
 <template>
    <div>
       <!-- region: whatsapp contact -->
+      <!--      add the contact no in url after 94 -->
       <!--      <div class="fixed z-20 bottom-6 right-6"> -->
       <!--         <UButton -->
       <!--            variant="link" -->
       <!--            :padded="false" -->
       <!--            target="_blank" -->
-      <!--            to="https://wa.me/9476272745" -->
+      <!--            to="https://wa.me/94" -->
       <!--         > -->
       <!--            <UIcon name="i-logos-whatsapp-icon" class="size-12 md:size-16" /> -->
       <!--         </UButton> -->
@@ -145,9 +146,10 @@ onUnmounted(() => {
                      <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-500" />
                      <p>+94658525888</p>
                   </div>
+                  <!--                  add the whatsapp number inthe url after 94 -->
                   <div class="flex gap-3 items-center group">
                      <UIcon name="i-uil-whatsapp" class="size-5 text-green-600 group-hover:text-green-500" />
-                     <ULink to="https://wa.me/9476272745" class="text-green-600 group-hover:text-green-500">
+                     <ULink to="https://wa.me/94" class="text-green-600 group-hover:text-green-500">
                         Click here to WhatsApp Chat!
                      </ULink>
                   </div>
