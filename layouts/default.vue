@@ -149,7 +149,11 @@ onUnmounted(() => {
                   <!--                  add the whatsapp number inthe url after 94 -->
                   <div class="flex gap-3 items-center group">
                      <UIcon name="i-uil-whatsapp" class="size-5 text-green-600 group-hover:text-green-500" />
-                     <ULink to="https://wa.me/94" class="text-green-600 group-hover:text-green-500">
+                     <ULink
+                        to="https://wa.me/94"
+                        class="text-green-600 group-hover:text-green-500"
+                        target="_blank"
+                     >
                         Click here to WhatsApp Chat!
                      </ULink>
                   </div>
