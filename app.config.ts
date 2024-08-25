@@ -3,10 +3,4 @@ export default defineAppConfig({
       primary: 'blue',
       gray: 'cool',
    },
-   /**
-    * To import the icon dynamically
-    */
-   icons: {
-      dynamic: true,
-   },
 });

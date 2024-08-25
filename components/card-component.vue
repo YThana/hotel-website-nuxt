@@ -1,17 +1,11 @@
 <script setup lang="ts">
-export interface CardData {
-   img: string;
-   title: string;
-   about: string;
-   tag?: string;
-   type?: 'swiper-dish' | 'base';
-}
+import type { CardData } from '~/types/card-component-types';
 
 const props = withDefaults(defineProps<CardData>(), {
    type: 'base',
 });
 
-const isTypeSwiperDIsh = computed(() => {
+const isTypeSwiperDish = computed(() => {
    return props.type === 'swiper-dish';
 });
 </script>
@@ -29,13 +23,15 @@ const isTypeSwiperDIsh = computed(() => {
       </div>
       <h3
          class="text-2xl font-semibold capitalize font-heading"
-         :class="[isTypeSwiperDIsh ? 'text-orange-500' : 'text-primary']"
+         :class="[isTypeSwiperDish ? 'text-orange-500' : 'text-primary']"
       >
          {{ title }}
       </h3>
-      <p :class="[isTypeSwiperDIsh ? 'text-white' : 'text-slate-700']">
-         {{ about }}}
-      </p>
+      <div :class="[isTypeSwiperDish ? 'text-white' : 'text-slate-700']">
+         <!-- {{ about }} -->
+         <div v-html="about"></div>
+         <!-- <slot/> -->
+      </div>
    </div>
 </template>
 

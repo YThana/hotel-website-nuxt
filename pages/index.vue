@@ -1,6 +1,13 @@
 <script setup lang="ts">
-import { handleMainSectionScroll } from '~/helpers/handle-scroll';
+// import { Autoplay } from 'swiper/modules'
+import { handleMainSectionScroll } from '~/utils/scroll-utils';
 import type { CardData } from '~/types/card-component-types';
+
+// const SwiperAutoplay = Autoplay
+
+useHead({
+   title: 'Welcome - The Lagoon Hut',
+});
 
 const dishes: CardData[] = [
    {
@@ -23,7 +30,7 @@ const events: CardData[] = [
       id: 1,
       img: '/events/event-1.jpg',
       title: 'Birthday Party',
-      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At',
+      about: 'Lorem ipsum <span class="text-green-500">green</span> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At',
    },
    {
       id: 2,
@@ -47,7 +54,7 @@ const events: CardData[] = [
          <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
             <h1 class="font-bold text-6xl sm:text-8xl text-primary font-heading" data-aos="fade-up">
                Hotel
-               <span class="text-white">Lagoon Hut</span>
+               <span class="text-white"> The <span class="text-primary">Lagoon</span> Hut</span>
             </h1>
 
             <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl" data-aos="fade-up" data-aos-delay="200">
@@ -209,8 +216,8 @@ const events: CardData[] = [
                            <div class="p-4 h-[25rem] md:h-[28rem] flex items-center justify-center w-full">
                               <CardComponent
                                  :img="dish.img"
-                                 :about="dish.about"
                                  :title="dish.title"
+                                 :about="dish.about"
                                  :tag="dish.tag"
                                  type="swiper-dish"
                               />
@@ -259,8 +266,8 @@ const events: CardData[] = [
             <div v-for="event in events" :key="event.id" data-aos="fade-up">
                <CardComponent
                   :img="event.img"
-                  :about="event.about"
                   :title="event.title"
+                  :about="event.about"
                   :tag="event.tag"
                />
             </div>
@@ -311,7 +318,7 @@ const events: CardData[] = [
 }
 
 .section-heading{
-   @apply text-4xl xl:text-5xl font-semibold uppercase font-heading
+   @apply text-4xl xl:text-5xl font-bold uppercase font-heading
 }
 
 .section-heading-tag{

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { handleScrollBottomOfPage } from '~/helpers/handle-scroll';
+import { handleScrollBottomOfPage } from '~/utils/scroll-utils';
 
 const isOpen = ref(false);
 

@@ -9,8 +9,8 @@ export default <Partial<Config>>{
    ],
    theme: {
       fontFamily: {
-         heading: ['Bitter', 'serif'],
-         inter: ['Inter', 'sans-serif'],
+         heading: ['Playfair Display', 'serif'],
+         montserrat: ['Exo', 'sans-serif'],
       },
       extend: {
          colors: {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { handleScrollBottomOfPage } from '~/helpers/handle-scroll';
+import { handleScrollBottomOfPage } from '~/utils/scroll-utils';
 
 const isFixed = ref(false);
 
@@ -26,33 +26,37 @@ onUnmounted(() => {
 <template>
    <div>
       <!-- region: whatsapp contact -->
-      <!--      add the contact no in url after 94 -->
-      <!--      <div class="fixed z-20 bottom-6 right-6"> -->
-      <!--         <UButton -->
-      <!--            variant="link" -->
-      <!--            :padded="false" -->
-      <!--            target="_blank" -->
-      <!--            to="https://wa.me/94" -->
-      <!--         > -->
-      <!--            <UIcon name="i-logos-whatsapp-icon" class="size-12 md:size-16" /> -->
-      <!--         </UButton> -->
-      <!--      </div> -->
+      <!-- add the contact no in url after 94 -->
+      <div class="fixed z-20 bottom-6 right-6">
+         <UButton
+            variant="link"
+            :padded="false"
+            target="_blank"
+            to="https://wa.me/94"
+         >
+            <UIcon name="i-logos-whatsapp-icon" class="size-12 md:size-16" />
+         </UButton>
+      </div>
       <!-- endregion: whatsapp contact -->
 
       <header
-         class="w-full p-6 z-10 fixed left-1/2 -translate-x-1/2"
+         class="w-screen p-6 z-10 fixed left-1/2 -translate-x-1/2"
          :class="[isFixed && 'transition-all backdrop-blur-md bg-white/75 shadow-lg']"
       >
          <section
             class="container mx-auto"
          >
             <div class="flex gap-6 justify-between items-center">
-               <h3
-                  class="text-4xl font-bold"
-                  :class="[!isFixed && 'text-white']"
+               <ULink
+                  to="/"
                >
-                  Lagoon Hut
-               </h3>
+                  <span
+                     class="text-3xl sm:text-4xl font-bold"
+                     :class="[!isFixed && 'text-white']"
+                  >
+                     The Lagoon Hut
+                  </span>
+               </ULink>
                <div class="hidden md:flex gap-6 items-center">
                   <ULink
                      to="/"
@@ -94,9 +98,11 @@ onUnmounted(() => {
          <div class="w-full bg-primary-100 px-6 py-10">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                <section class="flex flex-col gap-4">
-                  <h2 class="text-5xl font-bold">
-                     Lagoon Hut
-                  </h2>
+                  <ULink to="/">
+                     <span class="text-4xl font-bold">
+                        The Lagoon Hut
+                     </span>
+                  </ULink>
                   <p class="max-w-72 text-slate-600">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                   </p>
@@ -146,7 +152,7 @@ onUnmounted(() => {
                      <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-500" />
                      <p>+94658525888</p>
                   </div>
-                  <!--                  add the whatsapp number inthe url after 94 -->
+                  <!-- add the whatsapp number in the ULink url after 94 -->
                   <div class="flex gap-3 items-center group">
                      <UIcon name="i-uil-whatsapp" class="size-5 text-green-600 group-hover:text-green-500" />
                      <ULink

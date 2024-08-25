@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { handleMainSectionScroll } from '~/helpers/handle-scroll';
+import { handleMainSectionScroll } from '~/utils/scroll-utils';
 import type { CardData } from '~/types/card-component-types';
+
+useHead({
+   title: 'Dishes - The Lagoon Hut',
+});
 
 const dishes: CardData[] = [
    {
@@ -46,7 +50,7 @@ const dishes: CardData[] = [
             <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
                <h1 class="font-bold text-6xl sm:text-8xl text-primary font-heading" data-aos="fade-up">
                   Hotel
-                  <span class="text-white">Lagoon Hut</span>
+                  <span class="text-white"> The <span class="text-primary">Lagoon</span> Hut</span>
                </h1>
 
                <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl" data-aos="fade-up" data-aos-delay="200">
@@ -71,7 +75,7 @@ const dishes: CardData[] = [
       <!-- region: events -->
       <section id="dishes" class="container mx-auto px-6 my-14">
          <div class="h-1.5 w-10 bg-primary mx-auto mb-2" data-aos="fade-up"></div>
-         <h2 class="text-5xl font-semibold text-primary text-center font-heading" data-aos="fade-up">
+         <h2 class="text-5xl font-bold text-primary text-center font-heading" data-aos="fade-up">
             Dishes
          </h2>
 
@@ -79,9 +83,10 @@ const dishes: CardData[] = [
             <div v-for="dish in dishes" :key="dish.id" data-aos="fade-up">
                <CardComponent
                   :img="dish.img"
-                  :about="dish.about"
                   :title="dish.title"
+                  :about="dish.about"
                   :tag="dish.tag"
+                  type="swiper-dish"
                />
             </div>
          </div>

@@ -16,11 +16,11 @@ export default defineNuxtConfig({
    googleFonts: {
       display: 'swap',
       families: {
-         Inter: {
+         'Montserrat': {
             wght: '400..900',
             ital: '400..900',
          },
-         Bitter: {
+         'Playfair Display': {
             wght: '400..900',
             ital: '400..900',
          },
