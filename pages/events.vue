@@ -82,9 +82,10 @@ const events: CardData[] = [
                <CardComponent
                   :img="event.img"
                   :title="event.title"
-                  :about="event.about"
                   :tag="event.tag"
-               />
+               >
+                  <div v-html="event.about"></div>
+               </CardComponent>
             </div>
          </div>
       </section>

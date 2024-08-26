@@ -107,7 +107,7 @@ const events: CardData[] = [
                   <h3 class="mt-2 text-lg md:text-xl font-medium font-heading">
                      Peaceful Place
                   </h3>
-                  <p class="text-sm text-slate-500">
+                  <p class="text-sm text-slate-500 mt-1">
                      Lorem ipsum dolor sit amet consect elit.
                   </p>
                </div>
@@ -117,7 +117,7 @@ const events: CardData[] = [
                   <h3 class="mt-2 text-lg md:text-xl font-medium font-heading">
                      Top Travel
                   </h3>
-                  <p class="text-sm text-slate-500">
+                  <p class="text-sm text-slate-500 mt-1">
                      Lorem ipsum dolor sit amet consect elit.
                   </p>
                </div>
@@ -217,10 +217,11 @@ const events: CardData[] = [
                               <CardComponent
                                  :img="dish.img"
                                  :title="dish.title"
-                                 :about="dish.about"
                                  :tag="dish.tag"
                                  type="swiper-dish"
-                              />
+                              >
+                                 <div v-html="dish.about"></div>
+                              </CardComponent>
                            </div>
                         </SwiperSlide>
                      </Swiper>
@@ -267,9 +268,10 @@ const events: CardData[] = [
                <CardComponent
                   :img="event.img"
                   :title="event.title"
-                  :about="event.about"
                   :tag="event.tag"
-               />
+               >
+                  <div v-html="event.about"></div>
+               </CardComponent>
             </div>
          </div>
 

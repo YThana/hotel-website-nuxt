@@ -9,8 +9,8 @@ export default <Partial<Config>>{
    ],
    theme: {
       fontFamily: {
-         heading: ['Playfair Display', 'serif'],
-         montserrat: ['Exo', 'sans-serif'],
+         heading: ['Cormorant Garamond', 'serif'],
+         primary: ['Nunito Sans', 'sans-serif'],
       },
       extend: {
          colors: {

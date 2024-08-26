@@ -84,10 +84,10 @@ const dishes: CardData[] = [
                <CardComponent
                   :img="dish.img"
                   :title="dish.title"
-                  :about="dish.about"
                   :tag="dish.tag"
-                  type="swiper-dish"
-               />
+               >
+                  <div v-html="dish.about"></div>
+               </CardComponent>
             </div>
          </div>
       </section>

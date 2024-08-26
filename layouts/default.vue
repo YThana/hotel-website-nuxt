@@ -34,7 +34,7 @@ onUnmounted(() => {
             target="_blank"
             to="https://wa.me/94"
          >
-            <UIcon name="i-logos-whatsapp-icon" class="size-12 md:size-16" />
+            <UIcon name="i-logos-whatsapp-icon" class="brightness-90 hover:brightness-100 size-12 md:size-16" />
          </UButton>
       </div>
       <!-- endregion: whatsapp contact -->

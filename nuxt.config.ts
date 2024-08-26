@@ -16,13 +16,12 @@ export default defineNuxtConfig({
    googleFonts: {
       display: 'swap',
       families: {
-         'Montserrat': {
-            wght: '400..900',
-            ital: '400..900',
+         'Cormorant Garamond': {
+            wght: '400..700',
          },
-         'Playfair Display': {
-            wght: '400..900',
-            ital: '400..900',
+         'Nunito Sans': {
+            wght: '300..700',
+            ital: '300..700',
          },
       },
       preload: true,
