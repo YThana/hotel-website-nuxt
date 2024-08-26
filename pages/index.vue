@@ -6,7 +6,7 @@ import type { CardData } from '~/types/card-component-types';
 // const SwiperAutoplay = Autoplay
 
 useHead({
-   title: 'Welcome - The Lagoon Hut',
+   title: 'The Lagoon Hut - Welcome',
 });
 
 const dishes: CardData[] = [
