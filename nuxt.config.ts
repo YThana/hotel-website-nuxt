@@ -16,12 +16,11 @@ export default defineNuxtConfig({
    googleFonts: {
       display: 'swap',
       families: {
-         'Cormorant Garamond': {
-            wght: '400..700',
+         'DM Serif Display': {
+            wght: '400',
          },
-         'Nunito Sans': {
+         'Quicksand': {
             wght: '300..700',
-            ital: '300..700',
          },
       },
       preload: true,

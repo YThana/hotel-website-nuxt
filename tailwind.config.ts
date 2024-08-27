@@ -9,8 +9,8 @@ export default <Partial<Config>>{
    ],
    theme: {
       fontFamily: {
-         heading: ['Cormorant Garamond', 'serif'],
-         primary: ['Nunito Sans', 'sans-serif'],
+         heading: ['DM Serif Display', 'serif'],
+         primary: ['Quicksand', 'sans-serif'],
       },
       extend: {
          colors: {

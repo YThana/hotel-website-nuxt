@@ -50,12 +50,7 @@ onUnmounted(() => {
                <ULink
                   to="/"
                >
-                  <span
-                     class="text-3xl sm:text-4xl font-bold"
-                     :class="[!isFixed && 'text-white']"
-                  >
-                     The Lagoon Hut
-                  </span>
+                  <IconLogo class="h-8 w-auto sm:h-10 text-primary" />
                </ULink>
                <div class="hidden md:flex gap-6 items-center">
                   <ULink
@@ -99,9 +94,7 @@ onUnmounted(() => {
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                <section class="flex flex-col gap-4">
                   <ULink to="/">
-                     <span class="text-4xl font-bold">
-                        The Lagoon Hut
-                     </span>
+                     <IconLogo class="text-primary h-8 sm:h-10 w-auto" />
                   </ULink>
                   <p class="max-w-72 text-slate-600">
                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

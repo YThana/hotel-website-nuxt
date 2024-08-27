@@ -43,17 +43,12 @@ const events: CardData[] = [
 <template>
    <div class="w-full">
       <!-- region: hero -->
-      <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/events-bg.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
+      <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/events-page/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
          <div class="flex h-full p-6 items-center justify-center">
             <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
-               <h1 class="font-bold text-6xl sm:text-8xl text-primary font-heading" data-aos="fade-up">
-                  Hotel
-                  <span class="text-white"> The <span class="text-primary">Lagoon</span> Hut</span>
-               </h1>
-
-               <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl" data-aos="fade-up" data-aos-delay="200">
+               <h2 class="text-white font-bold font-heading text-3xl sm:text-5xl md:max-w-2xl" data-aos="fade-up" data-aos-delay="200">
                   "Experience <span class="text-primary">luxury</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
-               </p>
+               </h2>
 
                <div data-aos="fade-up" data-aos-delay="400">
                   <UButton
@@ -84,7 +79,7 @@ const events: CardData[] = [
                   :title="event.title"
                   :tag="event.tag"
                >
-                  <div v-html="event.about"></div>
+                  <p>{{ event.about }}</p>
                </CardComponent>
             </div>
          </div>

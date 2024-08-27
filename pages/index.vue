@@ -49,17 +49,12 @@ const events: CardData[] = [
 
 <template>
    <!-- region: hero -->
-   <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
+   <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/home-page/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
       <div class="flex h-full p-6 items-center justify-center">
          <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
-            <h1 class="font-bold text-6xl sm:text-8xl text-primary font-heading" data-aos="fade-up">
-               Hotel
-               <span class="text-white"> The <span class="text-primary">Lagoon</span> Hut</span>
-            </h1>
-
-            <p class="text-white italic font-bold text-2xl sm:text-4xl md:max-w-xl" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-white font-bold font-heading text-3xl sm:text-5xl md:max-w-2xl" data-aos="fade-up" data-aos-delay="200">
                "Experience <span class="text-primary">luxury</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
-            </p>
+            </h2>
 
             <div data-aos="fade-up" data-aos-delay="400">
                <UButton
@@ -80,7 +75,7 @@ const events: CardData[] = [
    <section id="about" class="mt-14 container mx-auto px-6">
       <div class="flex flex-col-reverse lg:flex-row gap-10">
          <div class="w-full lg:w-1/2 flex items-center" data-aos="fade-right">
-            <img src="/about-section/about-section-primary.jpg" class="size-full max-h-[48rem] object-cover" alt="hotel img" />
+            <img src="/home-page/about-section/about-section-primary.jpg" class="size-full max-h-[48rem] object-cover" alt="hotel img" />
          </div>
 
          <div class="w-full md:justify-center lg:w-1/2 flex flex-col gap-6">
@@ -98,7 +93,7 @@ const events: CardData[] = [
 
             <div class="grid grid-cols-2 gap-x-8 gap-y-6" data-aos="fade-left">
                <div class="row-span-2">
-                  <img src="/about-section/about-section-secondary.jpeg" class="size-full max-h-[24rem] object-cover" alt="hotel image" />
+                  <img src="/home-page/about-section/about-section-secondary.jpeg" class="size-full max-h-[24rem] object-cover" alt="hotel image" />
                </div>
 
                <div class="flex flex-col justify-center">
@@ -147,27 +142,27 @@ const events: CardData[] = [
       <div class="flex flex-wrap w-full mt-8">
          <div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 gap-4 w-full md:h-[36rem] lg:h-[52rem] xl:h-[64rem]">
             <div class="group gallery-img-wrapper" data-aos="fade-up">
-               <img src="/gallery-section/gallery-image-2.jpg" alt="gallery image 2" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-2.jpg" alt="gallery image 2" class="gallery-img" />
             </div>
 
             <div class="group gallery-img-wrapper row-span-2" data-aos="fade-up">
-               <img src="/gallery-section/gallery-image-1.jpg" alt="gallery image 4" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-1.jpg" alt="gallery image 4" class="gallery-img" />
             </div>
 
             <div class="group gallery-img-wrapper" data-aos="fade-up">
-               <img src="/gallery-section/gallery-image-4.jpg" alt="gallery image 1" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-4.jpg" alt="gallery image 1" class="gallery-img" />
             </div>
 
             <div class="group gallery-img-wrapper row-span-2" data-aos="fade-right">
-               <img src="/gallery-section/gallery-image-6.jpg" alt="gallery image 5" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-6.jpg" alt="gallery image 5" class="gallery-img" />
             </div>
 
             <div class="group gallery-img-wrapper row-span-2" data-aos="fade-left">
-               <img src="/gallery-section/gallery-image-3.jpg" alt="gallery image 3" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-3.jpg" alt="gallery image 3" class="gallery-img" />
             </div>
 
             <div class="group gallery-img-wrapper" data-aos="fade-up">
-               <img src="/gallery-section/gallery-image-5.jpg" alt="gallery image 6" class="gallery-img" />
+               <img src="/home-page/gallery-section/gallery-image-5.jpg" alt="gallery image 6" class="gallery-img" />
             </div>
          </div>
       </div>
@@ -177,7 +172,7 @@ const events: CardData[] = [
 
    <!-- region: Dishes -->
    <section id="dishes" class="mt-14">
-      <div class="w-full bg-fixed shadow-[inset_0_400px_400px_120px_rgba(0,0,0,0.8)] h-[50rem] bg-no-repeat bg-center bg-cover bg-[url('/dishes-bg-home.webp')]">
+      <div class="w-full bg-fixed shadow-[inset_0_400px_400px_120px_rgba(0,0,0,0.8)] h-[50rem] bg-no-repeat bg-center bg-cover bg-[url('/home-page/dishes-section-bg.jpg')]">
          <div class="size-full container mx-auto px-6 flex items-center justify-center">
             <div class="flex w-full flex-col md:flex-row gap-y-8 gap-x-4">
                <div class="flex flex-col gap-6 w-full md:w-1/2 justify-center items-center md:items-start text-center md:text-left">
@@ -220,7 +215,7 @@ const events: CardData[] = [
                                  :tag="dish.tag"
                                  type="swiper-dish"
                               >
-                                 <div v-html="dish.about"></div>
+                                 <p>{{ dish.about }}</p>
                               </CardComponent>
                            </div>
                         </SwiperSlide>
