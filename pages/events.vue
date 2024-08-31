@@ -66,7 +66,7 @@ const events: CardData[] = [
       <!-- endregion: hero -->
 
       <!-- region: events -->
-      <section id="dishes" class="container mx-auto px-6 my-14">
+      <section id="events" class="container mx-auto px-6 my-14">
          <div class="h-1.5 w-10 bg-primary mx-auto mb-2" data-aos="fade-up"></div>
          <h2 class="text-5xl font-bold text-primary text-center font-heading" data-aos="fade-up">
             Events

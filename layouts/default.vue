@@ -24,7 +24,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <div>
+   <div class="w-screen h-full">
       <!-- region: whatsapp contact -->
       <!-- add the contact no in url after 94 -->
       <div class="fixed z-20 bottom-6 right-6">
@@ -40,11 +40,11 @@ onUnmounted(() => {
       <!-- endregion: whatsapp contact -->
 
       <header
-         class="w-screen p-6 z-10 fixed left-1/2 -translate-x-1/2"
+         class="w-full z-10 fixed top-0"
          :class="[isFixed && 'transition-all backdrop-blur-md bg-white/75 shadow-lg']"
       >
          <section
-            class="container mx-auto"
+            class="container mx-auto p-6"
          >
             <div class="flex gap-6 justify-between items-center">
                <ULink
@@ -85,7 +85,7 @@ onUnmounted(() => {
          </section>
       </header>
 
-      <main>
+      <main class="w-full">
          <slot />
       </main>
 
