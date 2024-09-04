@@ -24,7 +24,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <div class="w-screen h-full">
+   <div class="w-full h-full">
       <!-- region: whatsapp contact -->
       <!-- add the contact no in url after 94 -->
       <div class="fixed z-20 bottom-6 right-6">
