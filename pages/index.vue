@@ -180,7 +180,7 @@ const events: CardData[] = [
                </div>
 
                <div class="group gallery-img-wrapper" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-3.jpg" alt="gallery image 1" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-6.jpg" alt="gallery image 1" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper row-span-2" data-aos="fade-right">
@@ -192,7 +192,7 @@ const events: CardData[] = [
                </div>
 
                <div class="group gallery-img-wrapper" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-6.jpg" alt="gallery image 6" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-3.jpg" alt="gallery image 6" class="gallery-img" />
                </div>
             </div>
          </div>
