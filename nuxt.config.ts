@@ -17,10 +17,10 @@ export default defineNuxtConfig({
       display: 'swap',
       families: {
          'Inknut Antiqua': {
-            wght: '300..700',
+            wght: [400, 500, 700],
          },
          'Quicksand': {
-            wght: '300..700',
+            wght: [400, 500, 700],
          },
       },
       preload: true,

@@ -39,24 +39,27 @@ function handleContactUs() {
 
                <ULink
                   to="/"
-                  active-class="text-3xl font-semibold text-primary font-heading"
-                  inactive-class="text-slate-700 text-3xl font-heading"
+                  class="font-heading text-3xl"
+                  active-class="font-bold text-primary"
+                  inactive-class="text-slate-700"
                   @click="isOpen = false"
                >
                   Home
                </ULink>
                <ULink
                   to="/events"
-                  active-class="text-3xl font-semibold text-primary font-heading"
-                  inactive-class="text-slate-700 text-3xl font-heading"
+                  class="font-heading text-3xl"
+                  active-class="font-bold text-primary"
+                  inactive-class="text-slate-700"
                   @click="isOpen = false"
                >
                   Events
                </ULink>
                <ULink
                   to="/dishes"
-                  active-class="text-3xl font-semibold text-primary font-heading"
-                  inactive-class="text-slate-700 text-3xl font-heading"
+                  class="font-heading text-3xl"
+                  active-class="font-bold text-primary"
+                  inactive-class="text-slate-700"
                   @click="isOpen = false"
                >
                   Dishes

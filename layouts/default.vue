@@ -5,8 +5,8 @@ const isFixed = ref(false);
 
 const linkButtonClass = computed(() => {
    if (isFixed.value)
-      return 'hover:text-primary-500 text-black font-heading';
-   return 'hover:text-primary-500  text-white font-heading';
+      return 'text-black';
+   return 'text-white';
 });
 
 function onScroll() {
@@ -52,24 +52,27 @@ onUnmounted(() => {
                >
                   <IconLogo class="h-8 w-auto sm:h-10" :class="[isFixed ? 'text-primary' : 'text-white']" />
                </ULink>
-               <div class="hidden md:flex gap-8 lg:gap-12 items-center">
+               <div class="hidden md:flex gap-6 lg:gap-12 items-center">
                   <ULink
+                     class="font-heading hover:text-primary"
                      to="/"
-                     active-class="font-bold text-primary font-heading"
+                     active-class="font-bold text-primary"
                      :inactive-class="linkButtonClass"
                   >
                      Home
                   </ULink>
                   <ULink
+                     class="font-heading hover:text-primary"
                      to="/events"
-                     active-class="font-bold text-primary font-heading"
+                     active-class="font-bold text-primary"
                      :inactive-class="linkButtonClass"
                   >
                      Events
                   </ULink>
                   <ULink
+                     class="font-heading hover:text-primary"
                      to="/dishes"
-                     active-class="font-bold text-primary font-heading"
+                     active-class="font-bold text-primary"
                      :inactive-class="linkButtonClass"
                   >
                      Dishes
@@ -92,13 +95,10 @@ onUnmounted(() => {
       <footer>
          <div class="w-full bg-primary-100 px-6 py-10">
             <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               <section class="flex flex-col gap-4">
+               <section class="flex flex-col gap-8">
                   <ULink to="/">
                      <IconLogo class="text-primary h-8 sm:h-10 w-auto" />
                   </ULink>
-                  <p class="max-w-72 text-slate-600">
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  </p>
                   <div class="flex items-center gap-3">
                      <ULink>
                         <UIcon name="i-uil-facebook" class="size-6 text-slate-500 hover:text-primary" />
@@ -111,7 +111,7 @@ onUnmounted(() => {
                </section>
 
                <section class="flex flex-col gap-3 items-start md:ml-20 lg:ml-0">
-                  <h3 class="font-bold text-lg uppercase">
+                  <h3 class="font-bold text-lg uppercase font-heading">
                      Links
                   </h3>
                   <ULink
@@ -138,12 +138,12 @@ onUnmounted(() => {
                </section>
 
                <div class="flex flex-col gap-4">
-                  <h3 class="font-bold text-lg uppercase">
+                  <h3 class="font-bold text-lg uppercase font-heading">
                      Contact Us
                   </h3>
                   <div class="flex gap-3 items-center">
                      <UIcon name="i-heroicons-phone-solid" class="size-5 text-slate-500" />
-                     <p>+94658525888</p>
+                     <p>+94 65 852 5888</p>
                   </div>
                   <!-- add the whatsapp number in the ULink url after 94 -->
                   <div class="flex gap-3 items-center group">
