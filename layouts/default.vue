@@ -5,8 +5,8 @@ const isFixed = ref(false);
 
 const linkButtonClass = computed(() => {
    if (isFixed.value)
-      return 'hover:text-primary-500 text-black';
-   return 'hover:text-primary-500  text-white';
+      return 'hover:text-primary-500 text-black font-heading';
+   return 'hover:text-primary-500  text-white font-heading';
 });
 
 function onScroll() {
@@ -50,32 +50,32 @@ onUnmounted(() => {
                <ULink
                   to="/"
                >
-                  <IconLogo class="h-8 w-auto sm:h-10 text-primary" />
+                  <IconLogo class="h-8 w-auto sm:h-10" :class="[isFixed ? 'text-primary' : 'text-white']" />
                </ULink>
-               <div class="hidden md:flex gap-6 items-center">
+               <div class="hidden md:flex gap-8 lg:gap-12 items-center">
                   <ULink
                      to="/"
-                     active-class="font-bold text-primary"
+                     active-class="font-bold text-primary font-heading"
                      :inactive-class="linkButtonClass"
                   >
                      Home
                   </ULink>
                   <ULink
                      to="/events"
-                     active-class="font-bold text-primary"
+                     active-class="font-bold text-primary font-heading"
                      :inactive-class="linkButtonClass"
                   >
                      Events
                   </ULink>
                   <ULink
                      to="/dishes"
-                     active-class="font-bold text-primary"
+                     active-class="font-bold text-primary font-heading"
                      :inactive-class="linkButtonClass"
                   >
                      Dishes
                   </ULink>
 
-                  <UButton label="Contact Us" size="xl" @click="handleScrollBottomOfPage" />
+                  <UButton class="font-heading" label="Contact Us" size="xl" @click="handleScrollBottomOfPage" />
                </div>
 
                <div class="flex md:hidden">

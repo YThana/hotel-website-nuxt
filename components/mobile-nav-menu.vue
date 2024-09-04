@@ -39,29 +39,29 @@ function handleContactUs() {
 
                <ULink
                   to="/"
-                  active-class="text-3xl font-semibold text-primary"
-                  inactive-class="text-slate-700 text-3xl"
+                  active-class="text-3xl font-semibold text-primary font-heading"
+                  inactive-class="text-slate-700 text-3xl font-heading"
                   @click="isOpen = false"
                >
                   Home
                </ULink>
                <ULink
                   to="/events"
-                  active-class="text-3xl font-semibold text-primary"
-                  inactive-class="text-slate-700 text-3xl"
+                  active-class="text-3xl font-semibold text-primary font-heading"
+                  inactive-class="text-slate-700 text-3xl font-heading"
                   @click="isOpen = false"
                >
                   Events
                </ULink>
                <ULink
                   to="/dishes"
-                  active-class="text-3xl font-semibold text-primary"
-                  inactive-class="text-slate-700 text-3xl"
+                  active-class="text-3xl font-semibold text-primary font-heading"
+                  inactive-class="text-slate-700 text-3xl font-heading"
                   @click="isOpen = false"
                >
                   Dishes
                </ULink>
-               <UButton label="Contact Us" size="xl" @click="handleContactUs" />
+               <UButton class="font-heading px-12 py-3 text-2xl" label="Contact Us" size="xl" @click="handleContactUs" />
             </div>
          </div>
       </USlideover>
