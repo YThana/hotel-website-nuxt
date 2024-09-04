@@ -12,16 +12,45 @@ useHead({
 const dishes: CardData[] = [
    {
       id: 1,
-      img: '/dishes/dish-1.jpg',
-      title: 'Panneer Butter Masala',
+      img: '/dishes/Chicken/1.jpg',
+      title: 'lorem ipsum',
       about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
    },
    {
       id: 2,
-      img: '/dishes/dish-2.jpg',
-      title: 'Paani Poori',
+      img: '/dishes/Beef/1.jpg',
+      title: 'lorem ipsum',
       about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
-      tag: 'New',
+   },
+   {
+      id: 3,
+      img: '/dishes/Rice/1.jpg',
+      title: 'lorem ipsum',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+   {
+      id: 4,
+      img: '/dishes/Seafood/1.jpg',
+      title: 'lorem ipsum',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+   {
+      id: 5,
+      img: '/dishes/Eggs/1.jpg',
+      title: 'lorem ipsum',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+   {
+      id: 6,
+      img: '/dishes/Veg/1.jpg',
+      title: 'lorem ipsum',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
+   },
+   {
+      id: 7,
+      img: '/dishes/Soups/1.jpg',
+      title: 'lorem ipsum',
+      about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr Lorem ipsum dolor sit amet,',
    },
 ];
 
