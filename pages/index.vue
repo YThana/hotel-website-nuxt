@@ -172,27 +172,27 @@ const events: CardData[] = [
          <div class="flex flex-wrap w-full mt-8">
             <div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 gap-4 w-full md:h-[36rem] lg:h-[52rem] xl:h-[64rem]">
                <div class="group gallery-img-wrapper" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-2.jpg" alt="gallery image 2" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-1.jpg" alt="gallery image 2" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper row-span-2" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-1.jpg" alt="gallery image 4" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-2.jpg" alt="gallery image 4" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-4.jpg" alt="gallery image 1" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-3.jpg" alt="gallery image 1" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper row-span-2" data-aos="fade-right">
-                  <img src="/home-page/gallery-section/gallery-image-6.jpg" alt="gallery image 5" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-4.jpg" alt="gallery image 5" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper row-span-2" data-aos="fade-left">
-                  <img src="/home-page/gallery-section/gallery-image-3.jpg" alt="gallery image 3" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-5.jpg" alt="gallery image 3" class="gallery-img" />
                </div>
 
                <div class="group gallery-img-wrapper" data-aos="fade-up">
-                  <img src="/home-page/gallery-section/gallery-image-5.jpg" alt="gallery image 6" class="gallery-img" />
+                  <img src="/home-page/gallery-section/gallery-image-6.jpg" alt="gallery image 6" class="gallery-img" />
                </div>
             </div>
          </div>
