@@ -16,8 +16,8 @@ export default defineNuxtConfig({
    googleFonts: {
       display: 'swap',
       families: {
-         'DM Serif Display': {
-            wght: '400',
+         'Inknut Antiqua': {
+            wght: '300..700',
          },
          'Quicksand': {
             wght: '300..700',

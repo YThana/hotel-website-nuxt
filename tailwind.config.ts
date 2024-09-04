@@ -9,7 +9,7 @@ export default <Partial<Config>>{
    ],
    theme: {
       fontFamily: {
-         heading: ['DM Serif Display', 'serif'],
+         heading: ['Inknut Antiqua', 'serif'],
          primary: ['Quicksand', 'sans-serif'],
       },
       extend: {
