@@ -83,7 +83,7 @@ const events: CardData[] = [
          <div class="flex h-full p-6 items-center justify-center">
             <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
                <div class="text-white bg-white/10 backdrop-blur-sm p-3 rounded-2xl font-bold font-heading text-3xl sm:text-5xl md:max-w-2xl" data-aos="fade-up" data-aos-delay="200">
-                  "Experience <span class="text-primary">luxury</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
+                  "Experience <span class="text-primary">noiseless</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
                </div>
 
                <div data-aos="fade-up" data-aos-delay="400">
@@ -114,11 +114,11 @@ const events: CardData[] = [
                </h4>
 
                <h2 class="section-heading" data-aos="fade-left">
-                  Luxury and best service villa in the town
+                  Cozy, noiseless and nature bathed in the Batticaloa lagoon!
                </h2>
 
                <p class="text-slate-500" data-aos="fade-left">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+                  The Lagoon Hut is a small & cozy getaway venue for small parties, dinner meet up and personal retreat. We are situated away from the town and surrounded by the beautiful lagoon, trees and full of nature.
                </p>
 
                <div class="grid grid-cols-2 gap-x-8 gap-y-6" data-aos="fade-left">
@@ -210,7 +210,7 @@ const events: CardData[] = [
                         Our Delicious Dishes
                      </h2>
                      <p class="text-white md:max-w-lg" data-aos="fade-right">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        We provide variety of dishes under vegetarian and non-vegetarian menu. This includes authentic Batticaloa’s traditional cuisine and as well as famous Indian and Chinese dishes. Take a look at our menu for more details.
                      </p>
                      <div data-aos="fade-right">
                         <UButton
