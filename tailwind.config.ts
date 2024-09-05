@@ -26,6 +26,11 @@ export default <Partial<Config>>{
                950: '#052e16',
             },
          },
+         fontSize: {
+            '3xl': ['1.875rem', '2.5rem'],
+            '4xl': ['2.25rem', '3rem'],
+            '5xl': ['3rem', '3.5rem'],
+         },
       },
    },
 };

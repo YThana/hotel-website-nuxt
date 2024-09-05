@@ -46,7 +46,7 @@ const events: CardData[] = [
       <div class="w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/events-page/hero.jpg')] shadow-[inset_0_100px_100px_-20px_rgba(0,0,0,0.8)]">
          <div class="flex h-full p-6 items-center justify-center">
             <div class="flex flex-col gap-8 md:gap-10 sm:text-center sm:items-center">
-               <div class="text-white bg-white/10 backdrop-blur-sm p-3 rounded-2xl font-bold font-heading text-3xl sm:text-5xl md:max-w-2xl" data-aos="fade-up" data-aos-delay="200">
+               <div class="text-white bg-white/10 backdrop-blur-sm p-3 rounded-2xl font-bold font-heading text-3xl sm:text-5xl md:max-w-3xl" data-aos="fade-up" data-aos-delay="200">
                   "Experience <span class="text-primary">noiseless</span>, <span class="text-primary">comfort</span>, and <span class="text-primary">unforgettable</span> moments—your perfect getaway awaits."
                </div>
 
@@ -68,7 +68,7 @@ const events: CardData[] = [
       <!-- region: events -->
       <section id="events" class="container mx-auto px-6 my-14">
          <div class="h-1.5 w-10 bg-primary mx-auto mb-2" data-aos="fade-up"></div>
-         <h2 class="text-5xl font-bold text-primary text-center font-heading" data-aos="fade-up">
+         <h2 class="text-3xl xl:text-4xl font-bold text-primary text-center font-heading" data-aos="fade-up">
             Events
          </h2>
 
