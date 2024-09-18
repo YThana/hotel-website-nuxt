@@ -34,7 +34,10 @@ onUnmounted(() => {
             target="_blank"
             to="https://wa.me/94"
          >
-            <UIcon name="i-logos-whatsapp-icon" class="brightness-90 hover:brightness-100 size-12 md:size-16" />
+            <span class="relative flex size-12 md:size-16">
+               <span class="animate-lower-ping absolute inline-flex size-full rounded-full"></span>
+               <UIcon name="i-logos-whatsapp-icon" class="relative z-10 hover:brightness-90 size-12 md:size-16" />
+            </span>
          </UButton>
       </div>
       <!-- endregion: whatsapp contact -->
@@ -176,4 +179,23 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="postcss">
+@keyframes lower-ping {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.3);
+      background-color: #4ade80;
+      opacity: 0.5;
+   }
+   100% {
+      transform: scale(1.7);
+      background-color: #86efac;
+      opacity: 0;
+   }
+}
+
+.animate-lower-ping {
+   animation: lower-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
 </style>
